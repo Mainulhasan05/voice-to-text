@@ -16,13 +16,17 @@ recognition.onerror=function(){
 recognition.onresult=function(e){
     var current=e.resultIndex;
     var transcript=e.results[current][0].transcript;
-    console.log(transcript);
+    
     if(transcript.includes("delete all")){
         content='';
         textBox.innerText=content;
     }
     else if(transcript.includes("full stop")){
         content+='. ';
+        textBox.innerText=content;
+    }
+    else if(transcript.includes("space")){
+        content+=' ';
         textBox.innerText=content;
     }
     else if(transcript.includes("make it capital")){
