@@ -16,8 +16,24 @@ recognition.onerror=function(){
 recognition.onresult=function(e){
     var current=e.resultIndex;
     var transcript=e.results[current][0].transcript;
-    content+=transcript;
-    textBox.innerText=content;
+    console.log(transcript);
+    if(transcript.includes("delete all")){
+        content='';
+        textBox.innerText=content;
+    }
+    else if(transcript.includes("full stop")){
+        content+='. ';
+        textBox.innerText=content;
+    }
+    else if(transcript.includes("make it capital")){
+        content=content.toUpperCase();
+        textBox.innerText=content;
+    }
+    else{
+        content+=transcript;
+        textBox.innerText=content;
+    }
+    
 };
 function strt(){
     if(content.length){
