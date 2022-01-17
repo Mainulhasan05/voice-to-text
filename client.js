@@ -21,8 +21,27 @@ recognition.onresult=function(e){
         content='';
         textBox.innerText=content;
     }
+    else if(transcript.includes("delete")){
+        const arr=transcript.split(' ');
+        if(arr.length>=3){
+            transcript=transcript.replace("delete","").trim();
+            content=content.replaceAll(transcript,"");
+            console.log(transcript);
+            textBox.innerText=content;
+            
+        }
+        else{
+            content+=transcript;
+            textBox.innerText=content;
+        }
+    }
     else if(transcript.includes("full stop")){
         content+='. ';
+        textBox.innerText=content;
+
+    }
+    else if(transcript.includes("show me the time")){
+        content+=new Date(Date.now()).toTimeString();
         textBox.innerText=content;
     }
     else if(transcript.includes("space")){

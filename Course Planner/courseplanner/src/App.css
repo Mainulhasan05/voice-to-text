@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@200&family=Josefin+Sans:ital,wght@1,500&family=Merriweather:ital@1&family=Mulish&family=Poppins:ital,wght@0,400;1,300;1,400;1,600&family=Roboto&display=swap');
+body{
+  background-color: aquamarine;
+}
+.header{
+  font-family: 'Poppins', sans-serif;
+}
+.headers{
+  min-width: 20%;
+  text-align: center;
+}
+.inputs{
+  
+  max-height: 50px;
+}
+.inputs input{
+  
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1px;
+}
+.optional{
+  font-size: medium;
+}
+.lab{
+     width: 100%;
+    float: left;
+    text-align: center;
+    margin:5px;
+    padding-bottom: 5px;
+}
+#flexCheckDefault{
+  width: 50px;
+  height: 25px;
+}
